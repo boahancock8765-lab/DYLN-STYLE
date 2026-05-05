@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfit Optimizer - Rekomendasi Pintar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>DressRight AI</h1>
+        <p>Temukan gaya terbaik berdasarkan bentuk tubuhmu</p>
+    </header>
+
+    <main class="container">
+        <!-- Bagian Input Form -->
+        <section class="input-section">
+            <div class="card">
+                <h2>Masukkan Data Fisik</h2>
+                <div class="form-group">
+                    <label for="height">Tinggi Badan (cm)</label>
+                    <input type="number" id="height" placeholder="Contoh: 170" required>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Berat Badan (kg)</label>
+                    <input type="number" id="weight" placeholder="Contoh: 65" required>
+                </div>
+                <div class="form-group">
+                    <label for="footSize">Ukuran Kaki (EU)</label>
+                    <input type="number" id="footSize" placeholder="Contoh: 42" required>
+                </div>
+                <button id="btn-generate">Dapatkan Rekomendasi</button>
+            </div>
+        </section>
+
+        <!-- Bagian Hasil Rekomendasi (Disembunyikan awalnya) -->
+        <section id="result-section" class="result-section hidden">
+            <div class="result-header">
+                <h2>Rekomendasi Untuk Kamu</h2>
+                <p id="body-status"></p>
+            </div>
+
+            <div class="outfit-grid">
+                <!-- Atasan -->
+                <div class="outfit-card">
+                    <div class="icon">👕</div>
+                    <h3>Atasan</h3>
+                    <p id="top-rec">-</p>
+                    <span class="size-tag" id="top-size">Size: -</span>
+                </div>
+
+                <!-- Bawahan -->
+                <div class="outfit-card">
+                    <div class="icon">👖</div>
+                    <h3>Bawahan</h3>
+                    <p id="bottom-rec">-</p>
+                    <span class="size-tag" id="bottom-size">Size: -</span>
+                </div>
+
+                <!-- Sepatu -->
+                <div class="outfit-card">
+                    <div class="icon">👟</div>
+                    <h3>Alas Kaki</h3>
+                    <p id="shoe-rec">-</p>
+                    <span class="size-tag" id="shoe-size">Size: -</span>
+                </div>
+            </div>
+            
+            <button id="btn-reset" class="btn-secondary">Hitung Ulang</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
